@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.hardware.DcMotor.RunMode;
 public class Wheel {
     private DcMotor motor;
 
-    Wheel(String id) {
+    Wheel(String id, HardwareMap hardwareMap) {
         motor = hardwareMap.get(DcMotor.class, id);
         motor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         motor.setDirection(DcMotor.Direction.FORWARD);
